@@ -1,6 +1,6 @@
 "use client"
 import React, {useState} from 'react'
-import { FaSearch, FaChevronDown } from "react-icons/fa";
+import { FaSearch,FaStar, FaChevronDown } from "react-icons/fa";
 import Account from './Account';
 import Help from './Help';
 import Cart from './Cart';
@@ -10,12 +10,15 @@ export default function MainNav() {
   return (
     <div className="py-2 flex gap-4 items-center justify-between mx-auto">
         <section>
-            <a href="https://flowbite.com" className="flex items-center space-x-3 rtl:space-x-reverse">
-                <img 
+            <a href={`/`} className="flex items-center space-x-2 rtl:space-x-reverse">
+                {/* <img 
                     src="https://flowbite.com/docs/images/logo.svg" 
                     className="h-8" 
                     alt="Flowbite Logo" 
-                />
+                /> */}
+                <span className='w-10 h-10 rounded-full flex items-center justify-center font-bold bg-orange-300'>
+                    <FaStar className='w-8 h-8 text-white'/>
+                </span>
                 <span 
                     className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
                 >
@@ -33,8 +36,8 @@ export default function MainNav() {
                         <input 
                             type='text'
                             placeholder='Search products, brands, and categories' 
-                            className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
-                                focus:ring-blue-500 focus:border-blue-500 block w-76 ps-10 p-2.5`} 
+                            className={`bg-gray-50 border border-gray-300 text-gray-900 text-sm 
+                            rounded-lg block w-76 ps-10 p-2.5 focus:border-transparent`} 
                         />
                     </div>
                     <div>

@@ -148,7 +148,7 @@ export default function Footer() {
                   <p className='text-white uppercase font-semibold'>{tab.title}</p>
                 </div>
                 <div>
-                  <ul>
+                  <ul className={`${tab.title === "Jumia International" ? 'grid grid-cols-2 gap-1' : ''}`}>
                     {tab.links?.map((link, index) => (
                       <li key={index}>
                         <Link 

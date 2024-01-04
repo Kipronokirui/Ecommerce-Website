@@ -46,7 +46,7 @@ export default function ForYourHome() {
             {forHome.map((deal, index) => {
                 return(
                     <Link 
-                        href={`#`} 
+                        href={`/category/${deal.slug}`} 
                         key={index}
                         className='overflow-hidden transition-transform transform-gpu hover:scale-105'
                     >

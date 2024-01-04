@@ -14,7 +14,7 @@ export default function DealsYouCantMiss() {
             {deals.map((deal, index) => {
                 return(
                     <Link 
-                        href={`#`} 
+                        href={`/products/${deal.slug}`} 
                         key={index}
                         className='overflow-hidden transition-transform transform-gpu hover:scale-105'
                     >

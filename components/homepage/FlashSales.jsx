@@ -34,7 +34,7 @@ export default function FlashSales() {
                     className={`relative bg-white border border-gray-200 rounded-lg shadow-md 
                         text-start overflow-hidden transition-transform transform-gpu hover:scale-105`}
                 >
-                    <a href="#">
+                    <a href={`/product/${item.slug}`}>
                         <img
                             className="rounded-lg"
                             src={`${item.image}`}
@@ -51,7 +51,7 @@ export default function FlashSales() {
                             {/* {`${percentageChange.toFixed(2)}%`}% */}
                         </div>
                         {/* End Discount Percentage Div */}
-                        <a href={`#`} >
+                        <a href={`/product/${item.slug}`} >
                             <p className='text-xs font-medium text-gray-600'>
                                 {item.title.length > 30 ? `${item.title.substring(0, 30)}...` : item.title}
                             </p>
