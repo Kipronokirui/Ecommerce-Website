@@ -1,17 +1,26 @@
+"use client";
+import React from 'react';
 import Link from 'next/link';
-import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { totalPriceSelector } from '@/store/features/cartSlice';
 
-export const cartItems = [
+export const cartLocalItems = [
     {
+        id:0,
         name:"Cart Item",
+        price: 1200,
     },
     {
+        id:1,
         name:"Cart Item",
+        price: 120,
     },
 ]
 export default function Cart() {
+    const cartItems = useSelector((state)=> state.cart.cartItems);
+    const totalPrice = useSelector(totalPriceSelector)
     const image = "https://ke.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/56/3070651/1.jpg?6593";
   return (
     <div className='mt-4'>
@@ -25,7 +34,18 @@ export default function Cart() {
                     </div>
                     <div className='p-2'>
                         <ul>
-                            {cartItems?.map((item, index) =>{
+                            {cartItems.map((item,index)=>(
+                                <li key={index}>
+                                    {item.product.name} 
+                                    <small>
+                                        {item.qty * item.product.price}
+                                    </small>
+                                    <h6>
+                                        Total: {totalPrice}
+                                    </h6>
+                                </li>
+                            ))}
+                            {cartLocalItems?.map((item, index) =>{
                                 return(
                                     <li 
                                         key={index}

@@ -9,7 +9,7 @@ export const store = configureStore({
     },
 })
 
-export const RootState = store.getState
-export const AppDispatch = store.dispatch
+// export const RootState = store.getState
+// export const AppDispatch = store.dispatch
 
-export const useAppDispatch = () => AppDispatch = useDispatch
+// export const useAppDispatch = () => AppDispatch = useDispatch

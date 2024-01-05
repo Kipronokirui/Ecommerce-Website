@@ -8,8 +8,12 @@ import { FaStar } from "react-icons/fa6";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
 import { FiCheckCircle } from "react-icons/fi";
 import Link from 'next/link';
+import AddToCartBtn from '../common/AddToCartBtn';
 
 export const product={
+    id:1,
+    price: 1200,
+    name: "Surface",
     images:[
         {
             src:"images/productDetails/detail01.jpg",
@@ -569,8 +573,9 @@ export default function MoreProductDetails() {
                                 <button 
                                     className={`uppercase font-semibold text-md w-full bg-orange-600 hover:bg-orange-800 text-white rounded-sm shadow-md p-2`}
                                 >
-                                    Add to Cart
+                                    Add to Carty
                                 </button>
+                                <AddToCartBtn product={product} />
                             </div>
                         </div>
                     </div>

@@ -38,7 +38,7 @@ export const cartSlice = createSlice({
 })
 
 const cartItems = (state) => state.cart.cartItems;
-export const totalCartItemSelector = createSelector([cartItems], (cartItems)=>
+export const totalCartItemsSelector = createSelector([cartItems], (cartItems)=>
     cartItems.reduce((total, curr)=>(total+=curr.qty), 0)
 );
 
@@ -46,7 +46,7 @@ export const totalPriceSelector = createSelector([cartItems], (cartItems)=>
     cartItems.reduce((total,curr)=>(total+= curr.qty * curr.product.price), 0)
 )
 
-export const productQtySelector = createSelector([cartItems, (cartItems,productId)=>productId],
+export const productQtyInCartSelector = createSelector([cartItems, (cartItems,productId)=>productId],
     (cartItems,productId)=>cartItems.find((el)=>el.product.id===productId)?.qty
 )
 
