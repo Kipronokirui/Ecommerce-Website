@@ -9,6 +9,9 @@ import ListProductsView from './ListProductsView';
 
 export const category_products=[
     {
+        id:0,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related01.jpg",
         currentPrice:13176,
@@ -17,6 +20,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:1,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related02.jpg",
         currentPrice:13577,
@@ -25,6 +31,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:2,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related03.jpg",
         currentPrice:11099,
@@ -33,6 +42,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:3,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related04.jpg",
         currentPrice:11900,
@@ -41,6 +53,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:4,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related05.jpg",
         currentPrice:11549,
@@ -49,6 +64,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:5,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -57,6 +75,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:6,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -65,6 +86,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:7,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -73,6 +97,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:8,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -81,6 +108,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:9,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -89,6 +119,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:10,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -97,6 +130,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:11,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -105,6 +141,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:12,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -113,6 +152,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:13,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -121,6 +163,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:14,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -129,6 +174,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:15,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,
@@ -137,6 +185,9 @@ export const category_products=[
         currentItems:45
     },
     {
+        id:16,
+        price:450,
+        name:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         title:"AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer Multi Media Speaker System",
         image: "images/productDetails/related/related06.jpg",
         currentPrice:11590,

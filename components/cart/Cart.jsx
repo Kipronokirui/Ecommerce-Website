@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux'
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import { totalPriceSelector } from '@/store/features/cartSlice';
+import { totalPriceSelector, totalCartItemsSelector } from '@/store/features/cartSlice';
+import EmptyCart from './EmptyCart';
 
 export const cartLocalItems = [
     {
@@ -19,9 +20,18 @@ export const cartLocalItems = [
     },
 ]
 export default function Cart() {
+    const totalItems = useSelector(totalCartItemsSelector)
     const cartItems = useSelector((state)=> state.cart.cartItems);
     const totalPrice = useSelector(totalPriceSelector)
     const image = "https://ke.jumia.is/unsafe/fit-in/150x150/filters:fill(white)/product/56/3070651/1.jpg?6593";
+
+    if(totalItems === 0){
+        return(
+            <section className='my-4 py-8 bg-white rounded'>
+                <EmptyCart />
+            </section>
+        )
+    }
   return (
     <div className='mt-4'>
         <div className='grid grid-cols-10 gap-2'>
@@ -29,14 +39,14 @@ export default function Cart() {
                 <div className='bg-white rounded w-full'>
                     <div className='p-2 border-b'>
                         <h5 className='font-semibold text-lg'>
-                            Cart (4)
+                            Cart ({totalItems})
                         </h5>
                     </div>
                     <div className='p-2'>
                         <ul>
                             {cartItems.map((item,index)=>(
                                 <li key={index}>
-                                    {item.product.name} 
+                                    {item.product.title} 
                                     <small>
                                         {item.qty * item.product.price}
                                     </small>
@@ -45,7 +55,7 @@ export default function Cart() {
                                     </h6>
                                 </li>
                             ))}
-                            {cartLocalItems?.map((item, index) =>{
+                            {cartItems?.map((item, index) =>{
                                 return(
                                     <li 
                                         key={index}
@@ -68,8 +78,7 @@ export default function Cart() {
                                                             className={`text-sm font-medium hover:text-orange-500`}
                                                         >
                                                             <h6>
-                                                                AILYONS ELP2404K 2.1CH SubWoofer Home Theatrer 
-                                                                Multi Media Speaker System
+                                                                {item.product.title}
                                                             </h6>
                                                         </Link>
                                                         <small className={`py-2 font-light text-xs text-deep-orange-500`}>
@@ -86,7 +95,7 @@ export default function Cart() {
                                                     </h6>
                                                     <div className='flex'>
                                                         <span className='font-medium text-xs text-gray-500 line-through'>
-                                                            Ksh. 3549
+                                                            Ksh. {item.product.price}
                                                         </span>
                                                         <span 
                                                             className={`flex items-center justify-center 
@@ -154,7 +163,7 @@ export default function Cart() {
                                 Subtotal
                             </span>
                             <span className='font-semibold text-lg'>
-                                Ksh. 30,454
+                                Ksh. {totalPrice}
                             </span>
                         </div>
                     </div>
@@ -178,7 +187,7 @@ export default function Cart() {
                             className={`text-white font-semibold w-full p-2 
                             bg-orange-700 hover:bg-orange-800 rounded shadow-md`}
                         >
-                            CHECKOUT (Ksh. 26, 224)
+                            CHECKOUT (Ksh. {totalPrice})
                         </button>
                     </div>
                 </div>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@material-tailwind/react": "^2.1.8",
+    "@redux-devtools/extension": "^3.3.0",
     "@reduxjs/toolkit": "^2.0.1",
     "millify": "^6.1.0",
     "next": "14.0.4",

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import AddToCartBtn from '../common/AddToCartBtn'
 
 export default function GridProductsView({products}) {
   return (
@@ -30,11 +31,12 @@ export default function GridProductsView({products}) {
               </div>
             </Link>
             <div className='my-2 hidden group-hover:block'>
-              <button 
+              {/* <button 
                 className={`w-full py-1 px-2 text-white rounded bg-orange-500 shadow-sm`}
               >
                 Add to Cart
-              </button>
+              </button> */}
+              <AddToCartBtn product={product}/>
             </div>
           </div>
         )

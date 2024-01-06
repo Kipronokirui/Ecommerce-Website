@@ -10,7 +10,10 @@ export default function AddToCartBtn({product}) {
     if(!qty){
         return(
             <div>
-                <button onClick={()=>dispatch(increment(product))}>
+                <button 
+                    className={`w-full py-1 px-2 text-white rounded bg-orange-500 shadow-sm`}
+                    onClick={()=>dispatch(increment(product))}
+                >
                     Add to Cart
                 </button>
             </div>
