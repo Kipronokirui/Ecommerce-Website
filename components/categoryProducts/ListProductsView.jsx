@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import AddToCartBtn from '../common/AddToCartBtn'
 
 export default function ListProductsView({products}) {
   return (
@@ -9,19 +10,21 @@ export default function ListProductsView({products}) {
           return(
             <li 
               key={index}
-              className={`bg-white rounded group overflow-hidden transition-transform transform-gpu hover:scale-105`}
+              className={`py-2 relative border-b bg-white cursor-pointer rounded group overflow-hidden transition-transform transform-gpu hover:scale-104`}
             >
               <div className='flex justify-between'>
                 <div>
-                  <img 
-                    src={`/${product.image}`} 
-                    alt='' 
-                  />
+                  <Link href={`/product/${product.slug}`}>
+                    <img 
+                      src={`/${product.image}`} 
+                      alt='' 
+                    />
+                  </Link>
                 </div>
                 <div className='flex '>
                   <div>
                     <Link 
-                      href={`#`}
+                      href={`/product/${product.slug}`}
                       className={`group-hover:text-orange-600`}
                     >
                       <p className=''>
@@ -39,12 +42,16 @@ export default function ListProductsView({products}) {
                       </p>
                     </div>
                     <div className='mb-4'>
-                      <button 
-                        className={`w-full py-1 px-2 text-white 
-                        rounded bg-orange-700 hover:bg-orange-500 shadow-sm`}
+                      {/* <button 
+                        className={`py-1 px-2 text-white 
+                        rounded bg-orange-700 hover:bg-orange-500 shadow-sm absolute bottom-4 right-2`}
                       >
                         Add to Cart
-                      </button>
+                      </button> */}
+                      <div className={`absolute bottom-4 right-2`}>
+                          <AddToCartBtn product={product} />
+                      </div>
+                      
                     </div>
                   </div>
                 </div>

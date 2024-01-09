@@ -6,6 +6,7 @@ import { MdOutlineDeleteOutline } from "react-icons/md";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { totalPriceSelector, totalCartItemsSelector } from '@/store/features/cartSlice';
 import EmptyCart from './EmptyCart';
+import ProductCartQty from './ProductCartQty';
 
 export const cartLocalItems = [
     {
@@ -44,7 +45,7 @@ export default function Cart() {
                     </div>
                     <div className='p-2'>
                         <ul>
-                            {cartItems.map((item,index)=>(
+                            {/* {cartItems.map((item,index)=>(
                                 <li key={index}>
                                     {item.product.title} 
                                     <small>
@@ -54,7 +55,7 @@ export default function Cart() {
                                         Total: {totalPrice}
                                     </h6>
                                 </li>
-                            ))}
+                            ))} */}
                             {cartItems?.map((item, index) =>{
                                 return(
                                     <li 
@@ -65,7 +66,7 @@ export default function Cart() {
                                             <div className='flex justify-between'>
                                                 <div className='flex items-center space-x-2'>
                                                     <div>
-                                                        <Link href={`#`}>
+                                                        <Link href={`/product/${item.product.slug}`}>
                                                             <img 
                                                                 src={image} 
                                                                 alt=''
@@ -74,7 +75,7 @@ export default function Cart() {
                                                     </div>
                                                     <div>
                                                         <Link 
-                                                            href={`#`}
+                                                            href={`/product/${item.product.slug}`}
                                                             className={`text-sm font-medium hover:text-orange-500`}
                                                         >
                                                             <h6>
@@ -91,7 +92,7 @@ export default function Cart() {
                                                 </div>
                                                 <div>
                                                     <h6 className='font-bold text-lg'>
-                                                        Ksh. 2999
+                                                        Ksh. {item.product.price}
                                                     </h6>
                                                     <div className='flex'>
                                                         <span className='font-medium text-xs text-gray-500 line-through'>
@@ -107,40 +108,8 @@ export default function Cart() {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className='flex justify-between items-center'>
-                                                <div>
-                                                    <button 
-                                                        className={`py-0.5 px-1 flex items-center space-x-1 
-                                                        text-center text-orange-700 font-semibold
-                                                        rounded hover:bg-orange-200`}
-                                                    >
-                                                        <span>
-                                                            <MdOutlineDeleteOutline className='w-6 h-6' />
-                                                        </span>
-                                                        <span>
-                                                            Remove
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                                <div className='flex space-x-2 items-center'>
-                                                    <button 
-                                                        className={`flex items-center justify-center px-2 py-0.5
-                                                        text-white text-2xl font-semibold rounded shadow-sm
-                                                        bg-orange-700 hover:bg-orange-500`}
-                                                    >
-                                                        <span className="w-6">-</span>
-                                                    </button>
-                                                    <span className={`font-semibold text-lg`}>
-                                                        1
-                                                    </span>
-                                                    <button
-                                                        className={`flex items-center justify-center px-2 py-0.5
-                                                        text-white text-2xl font-semibold rounded shadow-sm
-                                                        bg-orange-700 hover:bg-orange-500`}
-                                                    >
-                                                        <span className="w-6">+</span>
-                                                    </button>
-                                                </div>
+                                            <div>
+                                                <ProductCartQty product={item}/>
                                             </div>
                                         </div>
                                     </li>

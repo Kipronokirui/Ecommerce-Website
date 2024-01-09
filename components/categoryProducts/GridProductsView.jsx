@@ -12,7 +12,7 @@ export default function GridProductsView({products}) {
             className={`p-2 relative bg-white border border-gray-200 rounded-lg shadow-md 
                       text-start group overflow-hidden transition-transform transform-gpu hover:scale-105`}
           >
-            <Link href={``}>
+            <Link href={`/product/${product.slug}`}>
               <img
                   className="rounded-lg"
                   src={`/${product.image}`}

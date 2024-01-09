@@ -80,10 +80,9 @@ export default function Help() {
             </ul>
             <div className='py-4 px-4 w-full'>
                 <Link 
-                    href={`#`}
-                    className={`block focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 
-                        focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full
-                        dark:focus:ring-yellow-900 shadow-sm`}
+                    href={`/auth/sign-in`}
+                    className={`block focus:outline-none text-white bg-orange-600 hover:bg-orange-700 
+                    font-medium rounded-lg text-sm px-5 py-2.5 w-full shadow-sm`}
                 >
                     Sign In
                 </Link>

@@ -7,6 +7,8 @@ import { CiLocationArrow1, CiDeliveryTruck } from "react-icons/ci";
 import { FaHandsHoldingCircle } from "react-icons/fa6";
 import Timer from '../homepage/Timer';
 import MoreProductDetails from './MoreProductDetails';
+import AddToCart from './AddToCart';
+import { product } from '@/utils/product';
 
 export const images=[
     "/images/productDetails/detail01.jpg",
@@ -204,11 +206,12 @@ export default function ProductDetails() {
                             </span>
                         </div>
                         <div className='mt-2 w-full'>
-                            <button 
+                            {/* <button 
                                 className={`uppercase font-semibold text-md w-full bg-orange-600 hover:bg-orange-800 text-white rounded-sm shadow-md p-2`}
                             >
-                                Add to Cart
-                            </button>
+                                Add to Carts
+                            </button> */}
+                            <AddToCart product={product}/>
                         </div>
                     </div>
                     <div className='py-2'>
@@ -423,7 +426,7 @@ export default function ProductDetails() {
             </section>
         </section>
         <div className='mt-2'>
-            <MoreProductDetails />
+            <MoreProductDetails product={product} />
         </div>
     </div>
   )
