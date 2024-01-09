@@ -33,6 +33,16 @@ export const cartSlice = createSlice({
                     );
                 };
             };
+        },
+        removeItem: (state, action) => {
+            const item = state.cartItems.find( //Checking if the product already exists in the cart
+                (el)=> el.product.id === action.payload.id
+            )
+            if(item){
+                state.cartItems = state.cartItems.filter(
+                    (el)=> el.product.id !== action.payload.id
+                );
+            }
         }
     }
 })
@@ -50,5 +60,5 @@ export const productQtyInCartSelector = createSelector([cartItems, (cartItems,pr
     (cartItems,productId)=>cartItems.find((el)=>el.product.id===productId)?.qty
 )
 
-export const {increment, decrement} = cartSlice.actions;
+export const {increment, decrement, removeItem} = cartSlice.actions;
 export default cartSlice.reducer;

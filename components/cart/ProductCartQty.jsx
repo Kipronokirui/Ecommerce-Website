@@ -2,7 +2,7 @@ import React from 'react'
 import { MdOutlineDeleteOutline } from "react-icons/md";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment, productQtyInCartSelector } from '@/store/features/cartSlice';
+import { decrement, increment, removeItem, productQtyInCartSelector } from '@/store/features/cartSlice';
 
 export default function ProductCartQty({product}) {
     const qty = useSelector(state=>productQtyInCartSelector(state, product.product.id))
@@ -14,6 +14,7 @@ export default function ProductCartQty({product}) {
                 className={`py-0.5 px-1 flex items-center space-x-1 
                 text-center text-orange-700 font-semibold
                 rounded hover:bg-orange-200`}
+                onClick={() => dispatch(removeItem(product.product)) }
             >
                 <span>
                     <MdOutlineDeleteOutline className='w-6 h-6' />
